@@ -22,7 +22,7 @@ import './index.css'
 
 class EmojiGame extends Component {
   state = {
-    clickEmojiList: [],
+    clickedEmojiList: [],
     isGameInProgress: true,
     topScore: 0,
   }
@@ -97,12 +97,12 @@ class EmojiGame extends Component {
   }
 
   render() {
-    const {clickedEmojiList, isGameInProgress, topScore} = this.state
+    const {clickedEmojisList, isGameInProgress, topScore} = this.state
 
     return (
       <div className="app-container">
         <NavBar
-          currentScore={clickedEmojiList.length}
+          currentScore={clickedEmojisList.length}
           isGameInProgress={isGameInProgress}
           topScore={topScore}
         />
